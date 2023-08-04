@@ -1,1 +1,14 @@
-<p>weather-widget-list works!</p>
+<ng-container *ngIf="(weather$ | async) as weatherData">
+  <ng-container *ngIf="weatherData.length > 2; else errorTemplate">
+    <div class="container">
+      <div *ngFor="let data of weatherData; trackBy: trackByCity">
+        <app-weather-widget-item [weatherData]="data"></app-weather-widget-item>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #errorTemplate>
+    <div class="container">
+      <div class="error">No data found...</div>
+    </div>
+  </ng-template>
+</ng-container>
