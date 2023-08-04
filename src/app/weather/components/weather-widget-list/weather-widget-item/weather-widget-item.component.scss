@@ -1,0 +1,43 @@
+.weather-item {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background: #010339;
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 10px;
+  text-align: center;
+
+  img {
+    width: 50%;
+  }
+
+  .widget-header {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .widget-details {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+}
